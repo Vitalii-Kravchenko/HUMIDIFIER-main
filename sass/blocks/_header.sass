@@ -1,0 +1,99 @@
+.header
+  position: relative
+  background-image: url('../img/background.jpg')
+  background-size: cover
+  &__background-smooth
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 227px
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.74) 51.56%, rgba(255, 255, 255, 0.87) 69.79%, #FFFFFF 93.75%)
+  &__leaf
+    position: absolute
+    top: 0
+    left: 0
+    width: 510px
+    pointer-events: none
+  &__container
+    position: relative
+    padding-top: 148px
+    padding-bottom: 150px
+    display: flex
+    flex-direction: column
+    max-width: 1250px
+    z-index: 10
+  &__title
+    margin: 0 0 0 11px
+    max-width: 743px
+    width: 100%
+    +O(55px)
+    font-weight: bold
+    line-height: 80px
+    letter-spacing: 0.03em
+    text-transform: uppercase
+    color: #fff
+  &-list
+    margin-top: 38px
+    display: flex
+    flex-direction: column
+    max-width: 448px
+    &__wrapper
+      margin-top: 11px
+      display: flex
+      &:first-child
+        margin-top: 0
+      &-img
+        margin-right: 8px
+        width: 72px
+        height: 44px
+      &-text
+        margin-top: 2px
+        +O(20px)
+        line-height: 35px
+        letter-spacing: 0.03em
+        color: #fff
+  &-images
+    position: absolute
+    top: 187px
+    right: -72px
+    width: 700px
+    height: 706px
+    &__img
+      &--white
+        position: absolute
+        top: 36px
+        left: 0
+        width: 356px
+      &--rose
+        position: absolute
+        bottom: 0
+        right: 0
+        width: 286px
+    &__wrapper
+      position: absolute
+      top: 0
+      right: 25px
+      &-cloud
+        width: 325px
+      &-sale
+        +O(60px)
+        font-weight: bold
+        letter-spacing: 0.03em
+        color: #FF9191
+        &--position
+          position: absolute
+          top: 59px
+          left: 29.5%
+  &-price
+    margin-top: 53px
+    margin-left: 19px
+  &__button
+    margin-top: 36px
+    margin-left: 10px
+    max-width: 300px
+  &__count
+    margin-top: 21px
+    margin-left: 10px
+    +R(18px)
+    color: #fff

@@ -1,0 +1,96 @@
+.about
+  position: relative
+  &__leaf
+    position: absolute
+    top: -280px
+    left: 0
+    width: 413px
+    pointer-events: none
+  &__container
+    position: relative
+    padding-top: 85px
+    padding-bottom: 90px
+    display: flex
+    max-width: 1370px
+  &-info
+    margin-right: 25px
+    margin-left: 70px
+    display: flex
+    flex-direction: column
+    max-width: 718px
+    width: 100%
+    &__title
+      margin: 0 0 50px 0
+      +O(45px)
+      font-weight: bold
+      line-height: 70px
+      letter-spacing: 0.03em
+      text-transform: uppercase
+      color: #000
+    &__text
+      margin: 0
+      max-width: 688px
+      +O(18px)
+      line-height: 35px
+      letter-spacing: 0.03em
+      color: #000
+      &--margin
+        margin-left: 25px
+    &__button
+      position: relative
+      margin-top: 50px
+      max-width: 300px
+      z-index: 10
+  &-video
+    position: absolute
+    top: 84px
+    right: 17px
+    max-width: 525px
+    width: 100%
+    height: 720px
+    overflow: hidden
+    border-radius: 20px
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5)
+    cursor: pointer
+    z-index: 20
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: #000
+      opacity: 0
+      transition: opacity 0.7s ease
+      z-index: 6
+    &--active
+      &::after
+        opacity: 0.2
+    &__img
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      object-fit: cover
+      z-index: 5
+    &__button
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      z-index: 7
+      &-cloud
+        width: 154px
+        z-index: 7
+      &-play
+        position: absolute
+        top: 46%
+        left: 51%
+        transform: translate(-50%, -50%)
+        width: 18.48px
+        transition: width 0.7s ease
+        z-index: 5
+        &--active
+          width: 25.5px

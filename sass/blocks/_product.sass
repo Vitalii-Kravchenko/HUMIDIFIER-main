@@ -1,0 +1,189 @@
+.product
+  &__container
+    position: relative
+    padding-top: 80px
+    padding-bottom: 100px
+    max-width: 1100px
+    z-index: 10
+  &__cloud
+    &-1
+      position: absolute
+      top: -25px
+      left: -349px
+      width: 348px
+    &-2
+      position: absolute
+      top: 221px
+      left: -413px
+      width: 147px
+    &-3
+      position: absolute
+      top: 305px
+      left: -167px
+      width: 247px
+    &-4
+      position: absolute
+      top: 392px
+      right: -334px
+      width: 348px
+    &-5
+      position: absolute
+      top: 639px
+      right: -109px
+      width: 148px
+    &-6
+      position: absolute
+      top: 723px
+      right: -414px
+      width: 246px
+  &-card
+    position: relative
+    padding: 40px 55px
+    display: flex
+    justify-content: space-between
+    border-radius: 20px
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5)
+    background-color: #fff
+    min-height: 690px
+    &__slider
+      margin-right: 30px
+      padding-bottom: 40px
+      max-width: 560px
+      overflow: hidden
+    &__colors
+      display: flex
+      align-items: center
+    &__color
+      position: relative
+      display: flex
+      justify-content: center
+      align-items: center
+      margin-left: 8px
+      width: 30px
+      height: 30px
+      border-radius: 50%
+      box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.25)
+      cursor: pointer
+      -webkit-tap-highlight-color: transparent
+      &--white
+        background-color: #fff
+      &--rose
+        background-color: #FFB7B7
+      &-check
+        width: 12px
+        height: 8
+        transition: opacity 0.5s ease
+        pointer-events: none
+        opacity: 0
+        flex-shrink: 0
+        &--active
+          opacity: 1
+  &-swiper
+    position: relative
+    width: 560px !important
+    height: 560px !important
+    &--position
+      position: absolute
+      visibility: hidden
+    &--hidden
+      display: none
+    &__slide
+      position: relative
+      width: 560px !important
+      height: 560px !important
+      border-radius: 20px
+      overflow: hidden
+      & img
+        width: 100%
+        height: 100%
+        object-fit: cover
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: #000
+        opacity: 0
+        pointer-events: none
+        border-radius: 20px
+        overflow: hidden
+    & .swiper-pagination-bullets
+      bottom: -44px
+    & .swiper-pagination-bullet
+      margin: 0 2.5px !important
+      width: 10px !important
+      height: 10px !important
+      border-radius: 50%
+      background-color: #C4C4C4
+      transition: background-color 0.7s ease
+      opacity: 1
+    & .swiper-pagination-bullet-active
+      background-color: #FF3838
+  &-info
+    display: flex
+    flex-direction: column
+    max-width: 350px
+    width: 100%
+    &__title
+      margin: 5px 0 0 0
+      +O(45px)
+      font-weight: bold
+      text-transform: uppercase
+      color: #000
+    &__price
+      margin-top: 29px
+      margin-left: 8px
+      align-items: baseline
+      & .price-text--old
+        margin-right: 13px
+        font-size: 30px
+        color: #000
+      & .price-text--old-number
+        font-size: 30px
+        color: #000
+      & .price-text--new
+        margin-left: 13px
+        font-size: 45px
+      & .price-text--new-number
+        font-size: 45px
+  &-list
+    margin-top: 36px
+    display: flex
+    flex-direction: column
+    &__wrapper
+      margin-top: 12.4px
+      &--margin
+        margin-top: 0
+        display: flex
+        align-items: center
+      &-text
+        +O(20px)
+        font-weight: 600
+        color: #000
+        &--fonts-weight
+          margin-left: 8px
+          font-weight: normal
+  &-form
+    margin-top: 34px
+    display: flex
+    flex-direction: column
+    &__input
+      padding: 18.5px 25px 18.5px 25px
+      width: 100%
+      border-radius: 100px
+      border: 1px solid #000
+      +O(18px)
+      color: #616161
+      transition: border 0.2s ease
+      &:focus
+        border: 3px solid #FF3838
+      &-wrapper
+        margin-top: 10px
+        width: 100%
+        &--margin
+          margin-top: 0
+    &__button
+      margin-top: 20px
+      padding: 24px 30px 24px 30px

@@ -1,0 +1,110 @@
+.footer
+  position: relative
+  background-image: url('../img/background.jpg')
+  background-size: cover
+  &__background-smooth
+    position: absolute
+    width: 100%
+    height: 120px
+    &--1
+      top: 0
+      left: 0
+      background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.74) 51.56%, rgba(255, 255, 255, 0.87) 69.79%, #FFFFFF 93.75%)
+    &--2
+      bottom: 0
+      left: 0
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.74) 51.56%, rgba(255, 255, 255, 0.87) 69.79%, #FFFFFF 93.75%)
+  &__leaf
+    position: absolute
+    top: -264px
+    left: 0
+    width: 510px
+    pointer-events: none
+  &__container
+    position: relative
+    padding-top: 138px
+    padding-bottom: 120px
+    display: flex
+    flex-direction: column
+    max-width: 1250px
+  &__title
+    margin: 0 0 0 11px
+    max-width: 743px
+    width: 100%
+    +O(55px)
+    font-weight: bold
+    line-height: 80px
+    letter-spacing: 0.03em
+    text-transform: uppercase
+    color: #fff
+  &__subtitle
+    margin: 45px 0 0 11px
+    max-width: 660px
+    +O(35px)
+    font-weight: 600
+    color: #Fff
+  &-images
+    position: absolute
+    top: 187px
+    right: -72px
+    width: 700px
+    height: 706px
+    &__img
+      &--white
+        position: absolute
+        top: 36px
+        left: 0
+        width: 356px
+      &--rose
+        position: absolute
+        bottom: 0
+        right: 0
+        width: 286px
+    &__wrapper
+      position: absolute
+      top: 0
+      right: 25px
+      &-cloud
+        width: 325px
+      &-sale
+        +O(60px)
+        font-weight: bold
+        letter-spacing: 0.03em
+        color: #FF9191
+        &--position
+          position: absolute
+          top: 59px
+          left: 29.5%
+  &-price
+    margin-top: 53px
+    margin-left: 19px
+  &-form
+    margin: 22px 0 0 11px
+    display: flex
+    flex-direction: column
+    max-width: 350px
+    &__input
+      padding: 18.5px 25px 18.5px 25px
+      width: 100%
+      border-radius: 100px
+      border: 1px solid #fff
+      +O(18px)
+      color: #fff
+      transition: border 0.2s ease
+      &:focus
+        border: 3px solid #FF3838
+      &::placeholder
+        color: #fff
+      &-wrapper
+        margin-top: 10px
+        width: 100%
+        &--margin
+          margin-top: 0
+    &__button
+      padding: 23px 30px 24px 30px
+      margin-top: 20px
+  &__count
+    margin-top: 21px
+    margin-left: 10px
+    +R(18px)
+    color: #fff

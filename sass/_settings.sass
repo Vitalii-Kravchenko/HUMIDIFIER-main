@@ -1,0 +1,297 @@
+*
+  box-sizing: border-box
+
+select
+  -moz-appearance: none
+  -webkit-appearance: none
+
+select::-ms-value
+  background: none
+
+select::-ms-expand
+  display: none
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+  -webkit-appearance: none
+  margin: 0
+
+/* Firefox */
+input[type=number]
+  -moz-appearance: textfield
+
+a
+  text-decoration: none
+  color: inherit
+  font-family: inherit
+  border: none
+  outline: none
+  -webkit-tap-highlight-color: transparent
+  &:active
+    outline: none
+    border: none
+
+button
+  font-family: inherit
+  color: inherit
+  outline: none
+  border: none
+  background: none
+  cursor: pointer
+  -webkit-tap-highlight-color: transparent
+
+input
+  font-family: inherit
+  color: inherit
+  background: none
+  border: none
+  outline: none
+  -webkit-appearance: none
+  &::placeholder
+    opacity: 1
+  &::placeholder
+    color: inherit
+    opacity: 1
+  &:invalid
+    box-shadow: none
+
+img
+  width: 100%
+  user-select: none
+  -moz-user-select: none
+  -ms-user-select: none !important
+  -webkit-user-select: none !important
+
+select::-ms-expand
+  display: none
+
+input::-ms-clear
+  width: 15px
+  height: 15px
+
+table
+  border-collapse: collapse
+
+.size-table-wrapper
+  +O(20px)
+  position: relative
+  background-color: #d6e8ff
+  padding: 25px
+  width: auto
+  max-width: 740px
+  margin: 0 auto
+
+.size-table 
+  font-size: 20px
+  color: #000
+  text-align: center
+
+.size-table thead th 
+  padding: 8px 10px
+  border-bottom: 1px solid #000
+  color: #000
+
+.size-table thead th:nth-child(2) 
+  border-left: 1px solid #000
+
+.size-table tbody tr 
+  margin-bottom: 6px
+
+.size-table tbody tr:nth-of-type(even) td 
+  background-color: #c3d8f3
+
+.size-table tbody td 
+  width: 18.625%
+  padding: 20px
+
+.size-table tbody td:first-child 
+  width: 25.5%
+  padding-left: 0
+  color: #000
+  border-right: 1px solid #000
+  text-align: left
+
+.overflow
+  overflow: hidden
+
+.feedback-modal
+  padding: 30px 30px
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  max-width: 750px
+  width: 100%
+  min-height: 420px
+  border-radius: 10px
+  background-color: #fff
+  border: 1px solid #000
+  &__wrapper
+    display: flex
+    align-items: center
+    flex-wrap: wrap-reverse
+  &__input
+    margin-right: 30px
+    padding: 15px 17px
+    +O(16px)
+    color: #000
+    border: 1px solid #684CBA
+    border-radius: 5px
+    &::placeholder
+      +O(16px)
+      color: #888888
+      opacity: 0.7
+  &__text
+    margin-top: 20px
+    margin-bottom: 20px
+    padding: 15px 20px
+    width: 100%
+    height: 200px
+    +O(16px)
+    color: #000
+    border: 1px solid #684CBA
+    border-radius: 5px
+    outline: none
+    &::placeholder
+      +O(16px)
+      color: #888888
+      opacity: 0.7
+    &-wrapper
+      width: 100%
+  &__button
+    padding: 15px 20px
+    +O(16px)
+    min-width: 200px
+    background: #684CBA
+    border-radius: 5px
+    color: #fff
+  &__dialog
+    &-review
+      margin: 20px 0
+      display: flex
+      align-items: center
+      height: 20px
+    &-score
+      margin-right: 10px
+      +O(20px)
+      font-weight: normal
+      color: #000
+    &-raiting
+      display: flex
+    &-star
+      margin: 0 1.5px
+      width: 18px
+      height: 18px
+      cursor: pointer
+      &--active
+        background-image: url(../img/star.svg)
+
+.feedback-modal
+  &__thanks
+    padding: 30px 40px
+    border-radius: 10px
+    &-description
+      margin: 0
+      +O(16px)
+      font-weight: normal
+      color: #000
+
+.policy
+  max-width: 800px
+  border-radius: 10px
+  &__title
+    margin: 0
+    +O(20px)
+  &__text
+    +O(14px)
+    line-height: 26px
+    color: #000
+
+.modal-delivery
+  max-width: 800px
+  border-radius: 10px
+  &__title
+    margin: 0
+    +O(20px)
+  &__text
+    +O(14px)
+    line-height: 26px
+    color: #000
+
+.modal-refusal
+  max-width: 800px
+  border-radius: 10px
+  &__title
+    margin: 0
+    +O(20px)
+  &__text
+    +O(14px)
+    line-height: 26px
+    color: #000
+
+
+.container
+  margin: 0 auto
+  padding: 0 15px
+  max-width: 1298px
+  width: 100%
+
+.info
+  width: 100%
+  background-color: #fff
+  &__container
+    padding-top: 9px
+    padding-bottom: 18px
+    display: flex
+    flex-direction: column
+    align-items: center
+    max-width: 1060px
+    z-index: 10
+  &__text
+    margin: 0
+    +O(14px)
+    line-height: 25px
+    color: #000
+    text-align: center
+    &-wrapper
+      display: flex
+      align-items: center
+
+.price
+  display: flex
+  align-items: center
+  &-text
+    &--old
+      position: relative
+      margin-right: 20px
+      +O(40px)
+      color: #fff
+      &::after
+        content: ''
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translateX(-50%)
+        width: 110%
+        height: 5px
+        border-radius: 3px
+        background-color: #FF3838
+    &--new
+      margin-left: 20px
+      +O(55px)
+      font-weight: bold
+      color: #FF3838
+
+.order
+  padding: 18.5px 30px 18.5px 30px
+  max-width: 350px
+  width: 100%
+  +O(20px)
+  font-weight: 600
+  color: #fff
+  text-align: center
+  border-radius: 100px
+  background-color: #FF3838
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3)
+
+.fancybox-infobar
+  display: none

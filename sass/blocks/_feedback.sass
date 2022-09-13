@@ -1,0 +1,106 @@
+.feedback
+  position: relative
+  &__container
+    position: relative
+    padding-bottom: 100px
+    max-width: 1230px
+  &__leaf
+    position: absolute
+    top: -333px
+    left: 0
+    width: 515px
+    pointer-events: none
+  &__container
+    padding-top: 49px
+    display: flex
+    flex-direction: column
+    overflow: hidden
+  &__title
+    margin: 0 auto
+    +O(45px)
+    font-weight: bold
+    letter-spacing: 0.03em
+    text-transform: uppercase
+    color: #000
+    text-align: center
+  &-slider
+    margin-top: 58px
+    min-height: 315px
+  &-swiper
+    position: relative
+    margin: 0 auto
+    max-width: 750px !important
+    &__wrapper
+      position: relative
+      align-items: center
+    &__slide
+      position: relative
+      padding: 15px 30px 15px 30px
+      display: flex
+      align-items: center
+      width: 750px !important
+      border-radius: 20px
+      background-color: #fff
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5)
+      filter: blur(4px)
+      &::after
+        content: ''
+        position: absolute
+        width: 100%
+        height: 100%
+        background-color: #fff
+        opacity: 0.4
+        transition: opacity 0.7s ease
+        pointer-events: none
+      &-img
+        margin-right: 23px
+        width: 235px
+        height: 251px
+        object-fit: cover
+        border-radius: 20px
+        overflow: hidden
+      &-info
+        display: flex
+        flex-direction: column
+      &-name
+        +O(18px)
+        font-weight: bold
+        line-height: 35px
+        color: #000
+      &-text
+        margin: 10px 0 0 0
+        max-width: 412px
+        +O(18px)
+        line-height: 30px
+        color: #000
+    & .swiper-slide-active
+      position: relative
+      transform: translate3d(1px, 1px, 1px) rotateX(0deg) rotateY(0deg) !important
+      z-index: 10
+      filter: blur(0)
+      &::after
+        opacity: 0
+    & .swiper-slide-prev
+      z-index: 4
+      transform: translate3d(500px, 0px, -5px) rotateX(0deg) scale(0.79) rotateY(0deg) !important
+    & .swiper-slide-next
+      z-index: 4
+      transform: translate3d(-500px, 0px, -5px) rotateX(0deg) scale(0.79) rotateY(0deg) !important
+    & .swiper-slide-duplicate-prev
+      z-index: 3
+      transform: translate3d(-400px, 0px, -10px) rotateX(0deg) scale(0.65) rotateY(0deg) !important
+    & .swiper-slide-duplicate-next
+      z-index: 3
+      transform: translate3d(400px, 0px, 0)-10pxrotateX(0deg) scale(0.65) rotateY(0deg) !important
+    & .swiper-pagination-bullets
+      bottom: -65px
+    & .swiper-pagination-bullet
+      margin: 0 2.5px !important
+      width: 10px !important
+      height: 10px !important
+      border-radius: 50%
+      background-color: #C4C4C4
+      transition: background-color 0.7s ease
+      opacity: 1
+    & .swiper-pagination-bullet-active
+      background-color: #FF3838
